@@ -1,78 +1,64 @@
-# Cashmere Frontend Take Home
+# Portfolio Manager
 
-Build a responsive, dynamic, single-page application using **Next.js** that allows users to create and manage a multimedia portfolio. Users should be able to:
+A responsive, dynamic, single-page application using **Next.js** that allows users to create and manage a multimedia portfolio.
+The main features are:
 
-- Upload images and videos.
-- Provide descriptions and metadata for each item.
-- Organize portfolio items into expandable/collapsible sections.
-- View a live preview of the portfolio.
-- Save their portfolio by interacting with a backend API.
-
-You are encouraged to make the UI polished and user-friendly, and demonstrate thoughtful state management and code organization. Bonus points for animations, elegant component abstractions, or enhancements to UX.
-
-**🔎 You can use any coding tools that you like but you must be able to explain every line of code and what it does.**
+- Uploading images and videos.
+- Accessing descriptions and metadata for each item.
+- Organizing portfolio items into expandable/collapsible sections.
+- Viewing a live preview of the portfolio.
+- Saving portfolios by interacting with a backend API.
 
 ---
 
-## Technical Requirements
+## Setup
 
-### Frontend (Next.js, React, Tailwind (optional))
-
-- **File Upload**:
-  - Allow image/video uploads via a form.
-  - Preview uploaded media before submitting.
-
-- **State Management**:
-  - Use React Context, Redux, or any state solution to manage portfolio state.
-
-- **Dynamic UI**:
-  - Show/hide metadata fields based on file type.
-  - Dynamically update portfolio preview as users make changes.
-
-- **Expandable/Collapsible Sections**:
-  - Group portfolio items into categories (e.g., "Photography", "Video Work").
-  - Each group should be collapsible.
-
-- **Persistence**:
-  - Send portfolio data to a backend via API.
-  - Allow users to save and then reload previously saved portfolios.
-
-- **Creative UI**:
-  - Provide a live visual preview area for the portfolio.
-  - Style and layout is up to you — treat this like a real-world portfolio site.
-
----
-
-## Backend
-**Completing the API**
-Please fill in the blank for the `POST /upload` endpoint to make the endpoint functional
-
-Run the server using the following:
+1. Clone these github repo: https://github.com/hansen-yi/Portfolio-Manager.git
+2. To run the frontend, type the following into the terminal (assuming you are in cloned folder):
+```bash
+cd portfolio-manager
+npm run dev
+```
+3. Then to run the backend, open a new terminal and type the following:
 ```bash
 pip install fastapi uvicorn python-multipart pydantic
 uvicorn main:app --reload
 ```
+4. Now you should be able to interact with the portfolio manager!
 
-You are free to modify all existing code, plug in a database solution or add endpoints as you see fit.
+## Feature Walkthrough
+<p>
+  <img src="/demo_files/HomeScreen.png" width="45%" />
+  <a href="./demo_files/EntireSamplePortfolio.png">
+    <img src="./demo_files/SampleScreen.png" width="45%" />
+  </a>
+</p>
 
----
+The features in the video are shown in the following order:
+1. Creating a new portfolio
+2. Missing data error check
+3. Uploading image to the portfolio
+4. Uploaded image preview
+5. Labeling the image
+6. Saving the portfolio
+7. Loading the same portfolio
+8. Portfolio preview mode (same as just viewing it)
+9. Loading a different portfolio
+10. Video support
+11. Collapsable categories
 
-## Submission Instructions
-
-1. Fork the GitHub starter repo or create your own.
-2. Include a `README.md` with:
-   - Setup instructions.
-   - Screenshots or a brief walkthrough of your UX.
-   - Any additional features you built.
-   - Any future improvements and features.
-3. Provide a zip or GitHub link for both frontend and backend code.
-
----
-
-## Evaluation Criteria
-
-- Code quality, modularity, and readability.
-- UX and UI polish.
-- Proper use of React patterns and state management.
-- Successful integration with FastAPI.
-- Creative enhancements beyond the core requirements.
+## Future Improvements
+- Live Demo (for easier access)
+- Edit Portfolio Items
+  - Change category, description, title, etc.
+  - Remove items
+  - Resize (more advanced)
+- Reorder items (maybe using react-masonry-css)
+- Additional backend changes
+  - Remove getting image from backend endpoint
+  - Add or modify endpoint so that titles can be assigned for each portfolio
+  - Modify endpoints so that a user can gain access to all their portfolios => frontend change needed as well
+  - Store portfolios in cache so that refreshing doesn't lose them (might be connected to enabling a live demo)
+- More customizations
+  - Allow users to change colors
+  - Create "unconstrained" setting, more free organization without grouping items by categories
