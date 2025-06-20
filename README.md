@@ -58,7 +58,7 @@ The features in the video are shown in the following order:
 12. Collapsible categories
 
 ## Original Sketches (UI Ideation)
-![Sketches](./demo_files/sketch.png)
+![Sketches](./demo_files/Sketches.PNG)
 
 ## Future Improvements
 - Live Demo (for easier access)
