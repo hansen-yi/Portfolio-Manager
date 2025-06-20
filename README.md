@@ -9,11 +9,9 @@ The main features are:
 - Viewing a live preview of the portfolio.
 - Saving portfolios by interacting with a backend API.
 
----
-
 ## Setup
 
-1. Clone these github repo: https://github.com/hansen-yi/Portfolio-Manager.git
+1. Clone this github repo: https://github.com/hansen-yi/Portfolio-Manager.git
 2. To run the frontend, type the following into the terminal (assuming you are in cloned folder):
 ```bash
 cd portfolio-manager
@@ -27,25 +25,37 @@ uvicorn main:app --reload
 4. Now you should be able to interact with the portfolio manager!
 
 ## Feature Walkthrough
-<p>
-  <img src="/demo_files/HomeScreen.png" width="45%" />
-  <a href="./demo_files/EntireSamplePortfolio.png">
-    <img src="./demo_files/SampleScreen.png" width="45%" />
-  </a>
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <strong>Home Screen</strong><br>
+      <img src="/demo_files/HomeScreen.png" width="90%" />
+    </td>
+    <td align="center">
+      <strong>Sample Portfolio</strong><br>
+      <a href="./demo_files/EntireSamplePortfolio.png">
+        <img src="./demo_files/SampleScreen.png" width="90%" />
+      </a><br>
+      <em style="font-size: 0.9em;">Click image to view full sample portfolio.</em>
+    </td>
+  </tr>
+</table>
+
+https://github.com/user-attachments/assets/e1e634fb-b69a-47bc-8136-49a5d0d2576c
 
 The features in the video are shown in the following order:
 1. Creating a new portfolio
-2. Missing data error check
-3. Uploading image to the portfolio
-4. Uploaded image preview
-5. Labeling the image
-6. Saving the portfolio
-7. Loading the same portfolio
-8. Portfolio preview mode (same as just viewing it)
-9. Loading a different portfolio
-10. Video support
-11. Collapsable categories
+2. Adding a new item to the portfolio
+3. Missing data error check
+4. Uploading image to the portfolio
+5. Uploaded image preview
+6. Labeling the image
+7. Saving the portfolio
+8. Loading the same portfolio
+9. Portfolio preview mode (same as just viewing it)
+10. Loading a different portfolio
+11. Video support
+12. Collapsible categories
 
 ## Future Improvements
 - Live Demo (for easier access)
@@ -54,6 +64,7 @@ The features in the video are shown in the following order:
   - Remove items
   - Resize (more advanced)
 - Reorder items (maybe using react-masonry-css)
+- Reorder category groupings
 - Additional backend changes
   - Remove getting image from backend endpoint
   - Add or modify endpoint so that titles can be assigned for each portfolio
