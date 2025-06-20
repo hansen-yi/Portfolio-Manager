@@ -57,6 +57,9 @@ The features in the video are shown in the following order:
 11. Video support
 12. Collapsible categories
 
+## Original Sketches (UI Ideation)
+![Sketches](./demo_files/sketch.png)
+
 ## Future Improvements
 - Live Demo (for easier access)
 - Edit Portfolio Items
@@ -65,6 +68,7 @@ The features in the video are shown in the following order:
   - Resize (more advanced)
 - Reorder items (maybe using react-masonry-css)
 - Reorder category groupings
+- Show image summary when a categry is collapsed
 - Additional backend changes
   - Remove getting image from backend endpoint
   - Add or modify endpoint so that titles can be assigned for each portfolio

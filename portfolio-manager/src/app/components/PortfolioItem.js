@@ -61,42 +61,6 @@ export default function PortfolioItem({ item, index, allItems }) {
         )}
         </div>
 
-      {/* <div
-        className="rounded-2xl overflow-hidden shadow-sm border bg-white p-4"
-        onClick={() => {
-        //   setCurrentIndex(index);
-          setIsOpen(true);
-        }}
-      >
-        {item.media_type === "image" && (
-          <img
-            src={item.url}
-            alt={item.description || "Portfolio Image"}
-            className="w-full h-auto rounded-xl"
-          />
-        )}
-        {item.media_type === "video" && (
-          <video
-            src={item.url}
-            controls
-            className="w-full h-auto rounded-xl"
-          />
-        )}
-        <div className={(item.title || item.description) ? "mt-3" : ""}>
-            {item.title && (
-            <h2 className="text-base font-semibold text-gray-900">
-                {item.title}
-            </h2>
-            )}
-            {item.description && (
-            <p className="text-sm text-gray-600 mt-1">
-                {item.description}
-            </p>
-            )}
-        </div>
-
-      </div> */}
-
       {/* {isOpen && currentItem && (
         <div
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
