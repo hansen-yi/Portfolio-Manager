@@ -37,7 +37,21 @@ class Portfolio(BaseModel):
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     # FILL THIS IN
-    pass
+    # pass
+    filePath = os.path.join(UPLOAD_DIR, file.filename)
+    with open(filePath, 'wb') as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    return {"status": "success", "url": filePath}
+
+from fastapi.responses import FileResponse
+
+@app.get("/uploads/{filename}")
+async def get_uploaded_file(filename: str):
+    file_path = os.path.join(UPLOAD_DIR, filename)
+
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    return JSONResponse(status_code=404, content={"error": "File not found"})
 
 @app.post("/save-portfolio")
 async def save_portfolio(data: Portfolio):
